@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/sofa_godot_plugin/property_wrappers/test/property_wrapper_test.gd" type="Script" id=1]
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="PropertyWrapperTest" type="Spatial"]
+transform = Transform( 20, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
+script = ExtResource( 1 )
+show_basic_built-in_types = true
+show_string_properties = false
+"Basic built-in types" = null
+boolean_property = false
+integer_property = 1
+float_property = 1.0
+string/plain_string = "plain string"
+string/file = "None"
+string/global_file = "None"
+string/directory = "./"
+string/global_directory = "./"
+string/multinline_string = "multiline
+string"
+"Vector built-in types" = null
+vector_2 = Vector2( 1, 2 )
+vector_3 = Vector3( 1, 2, 3 )
+"Engine built-in types" = null
+color/rgba = Color( 0.0745098, 0.521569, 0.917647, 1 )
+color/rgb = Color( 0.870588, 0.192157, 0.192157, 1 )
+node_path = NodePath(".")
+"Container built-in types" = null
+array = [ "a", 1, 2.0 ]
+dictionary = {
+"a": 1,
+"b": "2"
+}
+"Custom types" = null
+single_choice = "option 1"
+multiple_choice = 7
+"Resource types" = null
+cube_mesh = SubResource( 1 )

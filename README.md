@@ -1,4 +1,6 @@
 # SOFA-Godot plugin
+This repository is part of "LapGym - An Open Source Framework for Reinforcement Learning in Robot-Assisted Laparoscopic Surgery".
+See [LapGym](https://arxiv.org/abs/2302.09606) for the paper and [lap_gym](https://github.com/ScheiklP/lap_gym) for the top level repository.
 
 1. [Prerequisites](#prerequisites)
 2. [Setup](#setup)
@@ -6,6 +8,9 @@
 4. [Components](#components)
 5. ["How-to"](#how-to)
 6. [Example scenes](#examples)
+7. [Citing](#citing)
+8. [Acknowledgements](#acknowledgements)
+
 ## Prerequisites
 
 * SOFA-Godot is a plugin for the [Godot game engine](https://godotengine.org).
@@ -530,3 +535,17 @@ You should be able to directly replace the [scene_description.py](https://gitlab
 [This scene](https://gitlab.ipr.kit.edu/sofa-godot/sofa_env_godot_scenes/-/blob/main/scenes/attach_constraint/attach_constraint.tscn) demonstrates the usage of SOFA's `AttachConstraint` in conjunction with the `NearestPointROI` component.
 
 ![attach_constraint](docs/attach_constraint.gif)
+
+## Citing
+If you use the project in your work, please consider citing it with:
+```bibtex
+@article{scheiklLapGym2023,
+    authors = {Scheikl, Paul Maria and Gyenes, Balázs and Younis, Rayan and Haas, Christoph and Neumann, Gerhard and Mathis-Ullrich, Franziska and Wagner, Martin},
+    title = {LapGym - An Open Source Framework for Reinforcement Learning in Robot-Assisted Laparoscopic Surgery},
+    year = {2023},
+    journal={arXiv preprint arXiv:2302.09606},
+}
+```
+
+## Acknowledgements
+This work is supported by the Helmholtz Association under the joint research school "HIDSS4Health – Helmholtz Information and Data Science School for Health".

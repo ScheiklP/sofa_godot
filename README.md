@@ -6,10 +6,9 @@ See [LapGym](https://arxiv.org/abs/2302.09606) for the paper and [lap_gym](https
 2. [Setup](#setup)
 3. [Tutorial](#tutorial-creating-a-sofa-scene-using-the-godot-plugin)
 4. [Components](#components)
-5. ["How-to"](#how-to)
-6. [Example scenes](#examples)
-7. [Citing](#citing)
-8. [Acknowledgements](#acknowledgements)
+5. [How-to](#how-to)<!-- 6. [Example scenes](#examples) -->
+6. [Citing](#citing)
+7. [Acknowledgements](#acknowledgements)
 
 ## Prerequisites
 
@@ -17,8 +16,8 @@ See [LapGym](https://arxiv.org/abs/2302.09606) for the paper and [lap_gym](https
 It was tested on Ubuntu 20.04 with Godot standard versions `3.5.1` and `3.4.5`.
 * You can download the linux versions of Godot [here](https://godotengine.org/download/linux).
 * Make sure you've build/installed [SOFA](https://github.com/sofa-framework/sofa) and [SofaPython3](https://github.com/sofa-framework/SofaPython3) within a [conda environment](https://docs.conda.io/en/latest/).
-You can follow the instructions [here](https://gitlab.ipr.kit.edu/sofa-ri/sofa_env/-/blob/main/docs/source/setting_up_sofa.rst).
-* If you want to use components from [sofa_env](https://gitlab.ipr.kit.edu/sofa-ri/sofa_env) you also need to [install sofa_env](https://gitlab.ipr.kit.edu/sofa-ri/sofa_env#getting-started) within your conda environment.
+You can follow the instructions [here](https://scheiklp.github.io/sofa_env/setting_up_sofa.html#installation).
+* If you want to use components from [sofa_env](https://github.com/ScheiklP/sofa_env) you also need to [install sofa_env](https://scheiklp.github.io/sofa_env/getting_started.html) within your conda environment.
 
 ## Setup
 - Clone this project into the `res://addons/` folder of your Godot project and [enable](https://docs.godotengine.org/en/stable/tutorials/plugins/editor/installing_plugins.html) the plugin like any other Godot plugin (`Project -> Project Settings -> Plugins`).
@@ -35,7 +34,7 @@ You can follow the instructions [here](https://gitlab.ipr.kit.edu/sofa-ri/sofa_e
    ├── your_project_folder_2
    └── ...
    ```
-- You can also have a look at some [examplary scenes](https://gitlab.ipr.kit.edu/sofa-godot/sofa_env_godot_scenes).
+<!-- - You can also have a look at some [examplary scenes](https://gitlab.ipr.kit.edu/sofa-godot/sofa_env_godot_scenes). -->
 ## Tutorial: Creating a SOFA scene using the Godot plugin
 
 1. Create a new Godot scene.
@@ -67,7 +66,7 @@ You can follow the instructions [here](https://gitlab.ipr.kit.edu/sofa-ri/sofa_e
       return scene_description
    ```
 5. Feel free to extend the scene graph with dedicated nodes provided by this plugin.\
-   For example, let's add a blue sphere using the `ControllableRigidObject` [template](https://gitlab.ipr.kit.edu/sofa-ri/sofa_env/-/blob/main/docs/source/sofa_templates.rst) from `sofa_env`:
+   For example, let's add a blue sphere using the `ControllableRigidObject` [template](https://scheiklp.github.io/sofa_env/sofa_templates.html) from `sofa_env`:
 
    ![example_scene](docs/example_scene.gif)
 
@@ -271,27 +270,27 @@ You can follow the instructions [here](https://gitlab.ipr.kit.edu/sofa-ri/sofa_e
 
 ### Supported `sofa_env` components
 * sofa_templates
-   * [camera](https://gitlab.ipr.kit.edu/sofa-ri/sofa_env/-/blob/main/sofa_env/sofa_templates/camera.py)
+   * [camera](https://github.com/ScheiklP/sofa_env/blob/main/sofa_env/sofa_templates/camera.py)
       * [Camera](sofa_python/sofa_env/camera/sofa_env_camera.gd)
-   * [collision](https://gitlab.ipr.kit.edu/sofa-ri/sofa_env/-/blob/main/sofa_env/sofa_templates/collision.py)
+   * [collision](https://github.com/ScheiklP/sofa_env/blob/main/sofa_env/sofa_templates/collision.py)
       * [add_collision_model](sofa_python/sofa_env/collision/add_collision_model.gd)
-   * [deformable](https://gitlab.ipr.kit.edu/sofa-ri/sofa_env/-/blob/main/sofa_env/sofa_templates/deformable.py)
+   * [deformable](https://github.com/ScheiklP/sofa_env/blob/main/sofa_env/sofa_templates/deformable.py)
       * [DeformableObject](sofa_python/sofa_env/deformable/deformable_object.gd)
       * [CuttableDeformableObject](sofa_python/sofa_env/deformable/cuttable_deformable_object.gd)
-   * [motion_restriction](https://gitlab.ipr.kit.edu/sofa-ri/sofa_env/-/blob/main/sofa_env/sofa_templates/motion_restriction.py)
+   * [motion_restriction](https://github.com/ScheiklP/sofa_env/blob/main/sofa_env/sofa_templates/motion_restriction.py)
       * [add_fixed_constraint_in_bounding_box](sofa_python/sofa_env/motion_restriction/add_fixed_constraint_in_bounding_box.gd)
-   * [rigid](https://gitlab.ipr.kit.edu/sofa-ri/sofa_env/-/blob/main/sofa_env/sofa_templates/rigid.py)
+   * [rigid](https://github.com/ScheiklP/sofa_env/blob/main/sofa_env/sofa_templates/rigid.py)
       * [RigidObject](sofa_python/sofa_env/rigid/rigid_object.gd)
       * [ControllableRigidObject](sofa_python/sofa_env/rigid/controllable_rigid_object.gd)
-   * [scene_header](https://gitlab.ipr.kit.edu/sofa-ri/sofa_env/-/blob/main/sofa_env/sofa_templates/scene_header.py)
+   * [scene_header](https://github.com/ScheiklP/sofa_env/blob/main/sofa_env/sofa_templates/scene_header.py)
       * [add_scene_header](sofa_python/sofa_env/scene_header/sofa_env_scene_header.gd)
-   * [solver](https://gitlab.ipr.kit.edu/sofa-ri/sofa_env/-/blob/main/sofa_env/sofa_templates/solver.py)
+   * [solver](https://github.com/ScheiklP/sofa_env/blob/main/sofa_env/sofa_templates/solver.py)
       * [add_solver](sofa_python/sofa_env/solver/add_solver.gd)
-   * [visual](https://gitlab.ipr.kit.edu/sofa-ri/sofa_env/-/blob/main/sofa_env/sofa_templates/visual.py)
+   * [visual](https://github.com/ScheiklP/sofa_env/blob/main/sofa_env/sofa_templates/visual.py)
       * [add_visual_model](sofa_python/sofa_env/visual/add_visual_model.gd)
 
 
-## "How-to"
+## How-to
 
 ### How to expose an existing SOFA object or node in Godot's scene graph?
 - Consider the scene we built in the [tutorial](#tutorial-creating-a-sofa-scene-using-the-godot-plugin).
@@ -515,7 +514,7 @@ def createScene(root_node: Sofa.Core.Node):
    # ...
    return scene_description
 ```
-
+<!--
 ## Examples
 
 As mentioned above, the [sofa_env_godot_scenes](https://gitlab.ipr.kit.edu/sofa-godot/sofa_env_godot_scenes) repository contains some exemplary scenes.
@@ -535,7 +534,7 @@ You should be able to directly replace the [scene_description.py](https://gitlab
 [This scene](https://gitlab.ipr.kit.edu/sofa-godot/sofa_env_godot_scenes/-/blob/main/scenes/attach_constraint/attach_constraint.tscn) demonstrates the usage of SOFA's `AttachConstraint` in conjunction with the `NearestPointROI` component.
 
 ![attach_constraint](docs/attach_constraint.gif)
-
+-->
 ## Citing
 If you use the project in your work, please consider citing it with:
 ```bibtex
